@@ -51,6 +51,9 @@
     // Create a Root view that contains the Layout above
     var RootView = Backbone.View.extend({
       el : $('.main'),
+      initialize : function() {
+        _.bindAll(this);
+      },
       render: function() {        
         this.$el.append(main.$el);
         main.render();
